@@ -1,4 +1,6 @@
+{%extends 'base.html'%}
 <title>{{ title }}</title>
-
+{% block content %}
 <p>{{quote.quote}}</p>
 <p>{{quote.author}}</p>
+{% endblock %}
