@@ -1,5 +1,6 @@
 from . import db
 from werkzeug.security import generate_password_hash,check_password_hash
+from flask_login import UserMixin
 
 
 class Quote:
@@ -7,7 +8,7 @@ class Quote:
         self.quote=quote
         self.author=author
 
-class User(db.Model):
+class User(UserMixin,db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer,primary_key = True)
     username = db.Column(db.String(255))

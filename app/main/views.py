@@ -1,6 +1,7 @@
 from . import main
 from flask import render_template,Flask
 from ..requests import get_quote
+from flask_login import login_required
 
 
 @main.route('/')
